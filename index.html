@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta property="og:title" content="og title" />
+    <meta property="og:description" content="og desc" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta name="keywords" content="key1, key2, key3" />
+    <meta name="description" content="desc" />
+
+    <!-- Favicon -->
+    <link href="./assets/img/favicon.png" rel="shortcut icon" />
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style_comp.css" />
+
+    <!--JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/ld.js"></script>
+    
+    <title>Seo.M.S</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header-wrapper">
+      <div class="header-contents">
+        <!-- 타이틀 -->
+        <p class="title" onclick="ssafy.ld.goPage(0)">Seo MooSeong</p>
+
+        <!-- 상단 메뉴 && 모바일 메뉴 -->
+        <div class="nav-bar">
+          <ul>
+            <li>
+              <a class="a-nav-bar" onClick="ssafy.ld.goPage(1)">About Me</a>
+            </li>
+            <li>
+              <a class="a-nav-bar" onClick="ssafy.ld.goPage(2)">Skills</a>
+            </li>
+            <li>
+                <a class="a-nav-bar" onClick="ssafy.ld.goPage(3)">Timeline</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <div class="main-wrapper">
+      <!-- section-1 -->
+      <div class="section section-1">
+        <div class="section-1-background"></div>
+        <div class="section-content">
+          <h1 id="typing">
+            <!-- <span>Hello.</span> <br />
+            <span>I'm Frontend Developer.</span> -->
+          </h1>
+        </div>
+        <button class="btn-scroll-down" onclick="ssafy.ld.goPage(1)">
+          Scroll down
+        </button>
+      </div>
+      <script>
+          var xx = 0;
+          var txt = "Hello. I'm Frontend Developer."
+          var speed = 150;
+          typeWriter();
+          function typeWriter(){
+            if(xx < txt.length){
+              if(xx == 6){
+                document.getElementById("typing").innerHTML += "<br>";
+              }
+              document.getElementById("typing").innerHTML += txt.charAt(xx);
+              xx++;
+              setTimeout(typeWriter, speed);
+            }
+          }
+      </script>
+      <!-- section-2 : 자기소개 -->
+      <div class="section section-2">
+        <div class="section-content">
+          <div>
+            <p class="txt">About Me</p>
+            <h2 class="txt">Seo MooSeong</h2>
+            <p class="txt" style="line-height: 2.0em !important">
+              안녕하세요.<br>
+              Front-End 개발자를 준비하고 있는 <span class="emphasis">서무성</span>입니다.<br>
+              저는 우주 속 우주 탐험가처럼 <br>
+              상상 속 세계에 <span class="emphasis">창의적인 개발자</span>가 되고 싶습니다.<br>
+              현재는 SSAFY를 통해서 개발자 기초 역량을 키우고 있습니다.
+            </p>
+          </div>
+          <div>
+            <img src="assets/img/img-about-me.jpeg" alt="" width="500" />
+          </div>
+        </div>
+      </div>
+
+      <!-- section-3 : 보유 기술 역량 -->
+      <div class="section section-3">
+        <div class="section-content">
+          <h2>Skills</h2>
+          <div>
+            <ul>
+              <li>HTML5</li>
+              <li><span class="score score-html5"></span></li>
+              <li>CSS3</li>
+              <li><span class="score score-css3"></span></li>
+              <li>Javascript</li>
+              <li><span class="score score-js"></span></li>
+            </ul>
+            <ul>
+              <li>Java</li>
+              <li><span class="score score-java"></span></li>
+              <li>Vue.js</li>
+              <li><span class="score score-vue"></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section section-4" style="margin-top:40px; margin-bottom: 20px">
+        <div class="section-content">
+            <div>
+              <div id="timeline1" class="timeline" style="font-weight: normal !important">
+    
+                  <div class="container right">
+                    <div class="content">
+                        <h2>2017.12</h2>
+                        <p>리눅스마스터 2급</p>  
+                    </div>
+                  </div>
+                  <div class="container left">
+                    <div class="content">
+                        <h2>2018.05</h2>
+                        <p>정보처리기사</p> 
+                    </div>
+                  </div>
+                  <div class="container right">
+                    <div class="content">
+                        <h2>2018.06</h2>
+                        <p>정보보안관제사 2급</p> 
+                    </div>
+                  </div>
+                  <div class="container left">
+                      <div class="content">
+                          <h2>2018.12</h2>
+                          <p>SSAFY 입소</p> 
+                      </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2>2019.02</h2>
+                            <p>대구가톨릭대학교 정보보호학과 졸업</p> 
+                        </div>
+                      </div>
+                  </div>
+                  
+                </div>
+            </div>
+          </h2>
+        </div>
+        <!-- footer-->
+        <div class="footer">
+          <p><span>&copy; Copyright 2019 Seo MooSeong All Right Reserved.</span><span class="footerContent" style="margin-top:10px !important; height: 40px !important;"><a href="https://github.com/SeoMooseong/web1"><img src="./assets/img/github.jpg" style="width:30px; height:30px; border-radius: 50px;"></a>
+            <a href="https://www.facebook.com"><img src="./assets/img/facebook.jpg" style="width:30px; height:30px; border-radius: 50px;"></a>
+            <a href="https://www.instagram.com/?hl=ko"><img src="./assets/img/insta.jpg" style="width:30px; height:30px; border-radius: 50px;"></a></span></p>
+          
+        </div>
+      </div>
+    </div>
+      
+    <!-- init script -->
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function() {
+        // scroll active
+        setTimeout(function() {
+          var items = document.querySelectorAll(".section");
+          items[0].classList.add("active");
+        }, 500);
+
+        ssafy.ld.init();
+      });
+    </script>
+  </body>
+</html>
